@@ -6,4 +6,4 @@ class ChildImpl(Calculator):     # así se implementan los métodos de Calculato
     num2 = 200
 
     def getCompleteData(self):
-        return self.num2 + self.
+        return self.num2
