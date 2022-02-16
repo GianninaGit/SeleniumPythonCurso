@@ -4,7 +4,7 @@
 # el nombre constructor tiene que ser __init__
 
 class Calculator:
-    num = 100 # class variable: es constante
+    num = 200 # class variable: es constante
     # default constructor:
     def __init__(self, a, b): #self es por default, si hay mas argumentos, hay que poneponerlos
         self.firstNumber = a # self es mi objeto, a este objeto le adjunto el argumento a y b en una variable a y b
