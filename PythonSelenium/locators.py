@@ -8,8 +8,13 @@ from selenium import webdriver
 
 driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
 driver.get("https://rahulshettyacademy.com/#/practice-project")
-#driver.maximize_window()
+#driver.maximize_window() lo comento porque sino falla el locator del tilde.
+
+#WebLocators as name, id and class can be used only if the dev has defined them, if not, no
 driver.find_element_by_name("name").send_keys("Giannina")
 driver.find_element_by_name("email").send_keys("giannisarappa@gmail.com")
-driver.find_element_by_name("agreeTerms").click()
+driver.find_element_by_id("agreeTerms").click()
+
+
+
 
