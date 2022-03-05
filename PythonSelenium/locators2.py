@@ -7,6 +7,8 @@
 from selenium import webdriver
 
 driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
+driver.implicitly_wait(10)
+
 driver.get("https://sso.teachable.com/secure/9521/identity/login")
 
 #WebLocators as XPATH and CSS, can be built from any object in the web page, no dependen de las propiedades definidas por los devs.
@@ -20,5 +22,5 @@ driver.find_element_by_id("remember_me").click()
 driver.find_element_by_xpath("//*[@type='submit']").click()
 
 #CLASS cada clase se separa con un espacio, usar solo uno entre "". Chequear que el texto de éxito aparece en pantalla:
-print(driver.find_element_by_class_name("bodySmall").text)  #Para ver si está bien mapeado, en chrome CSS: chropath div[class*="bodySmall"]
+print(driver.find_element_by_class_name("auth-flash-error").text)  #Para ver si está bien mapeado, en chrome CSS: chropath div[class*="bodySmall"]
                                                         #ver abajo "1 element matching"
